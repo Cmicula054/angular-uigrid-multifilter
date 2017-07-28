@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp.bootstrap">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UI Bootstrap</title>
+
+
+      <!-- SCRIPT TAGS -->
+      <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+      <script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+      <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+      <script type="text/javascript" src="node_modules/angular-ui-grid/ui-grid.js"></script>
+      <script type="text/javascript" src="node_modules/angularjs-dropdown-multiselect/dist/angularjs-dropdown-multiselect.min.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+      <script type="text/javascript" src="columnFilter.js"></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- SCRIPT TAGS -->
+      <!-- LINK TAGS -->
+      <link rel="stylesheet" type="text/css" href="node_modules/angular-ui-grid/ui-grid.css" />
+      <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.css">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <!-- LINK TAGS -->
+  </head>
+  <body ng-controller="mainCtrl">
+
+      <button id="filterButton" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Filter Columns</button>
+
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"><strong>Filter Columns</strong></h4>
+            </div>
+            <div class="modal-body">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Column Name:</th>
+                        <th>Filter:</th>
+                        <th>Value:</th>
+                      </tr>
+                    </thead>
+                      <tbody>
+                      <tr>
+                        <!-- FIRST COLUMN ROW -->
+                        <td>
+                            <select ng-model="columnName" class="form-control" class="columnName">
+                                <option></option>
+                                <option>First Name</option>
+                                <option>Last Name</option>
+                                <option>Company</option>
+                                <option>Employed</option>
+                                <option>Gender</option>
+                                <option>Country</option>
+                                <option>DOB</option>  
+                                <option>Age</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select ng-model="filter" class="form-control" class="filter">
+                                <option>Equal to</option>
+                                <option>Contains</option>
+                                <option>in between</option>
+                                <option>Not equal to</option>
+                                <option>Greater than</option>
+                                <option>Less than</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text">
+                        </td>
+                        <!-- FIRST COLUMN ROW -->
+                      </tr>
+                      <tr>
+                      <!-- SECOND COLUMN ROW -->
+                        <td>
+                            <select class="form-control" class="columnName">
+                                <option></option>
+                                <option>First Name</option>
+                                <option>Last Name</option>
+                                <option>Company</option>
+                                <option>Employed</option>
+                                <option>Gender</option>
+                                <option>Country</option>
+                                <option>DOB</option>  
+                                <option>Age</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control" class="filter">
+                                <option>Equal to</option>
+                                <option>Contains</option>
+                                <option>in between</option>
+                                <option>Not equal to</option>
+                                <option>Greater than</option>
+                                <option>Less than</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text">
+                        <!-- SECOND COLUMN ROW -->
+                      </tr>
+                      <tr>
+                        <!-- THIRD COLUMN ROW -->
+                        <td>
+                            <select class="form-control" class="columnName">
+                                <option></option>
+                                <option>First Name</option>
+                                <option>Last Name</option>
+                                <option>Company</option>
+                                <option>Employed</option>
+                                <option>Gender</option>
+                                <option>Country</option>
+                                <option>DOB</option>  
+                                <option>Age</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control" class="filter">
+                                <option>Equal to</option>
+                                <option>Contains</option>
+                                <option>in between</option>
+                                <option>Not equal to</option>
+                                <option>Greater than</option>
+                                <option>Less than</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text">
+                        </td>
+                        <!-- THIRD COLUMN ROW -->
+                      </tr>
+                      <tr>
+                      <!-- FORTH COLUMN ROW -->
+                        <td>
+                            <select class="form-control" class="columnName">
+                                <option></option>
+                                <option>First Name</option>
+                                <option>Last Name</option>
+                                <option>Company</option>
+                                <option>Employed</option>
+                                <option>Gender</option>
+                                <option>Country</option>
+                                <option>DOB</option>  
+                                <option>Age</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control" class="filter">
+                                <option>Equal to</option>
+                                <option>Contains</option>
+                                <option>in between</option>
+                                <option>Not equal to</option>
+                                <option>Greater than</option>
+                                <option>Less than</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text">
+                        </td>
+                        <!-- FORTH COLUMN ROW -->
+                      </tr>
+                      <tr>
+                        <!-- FIFTH COLUMN ROW -->
+                        <td>
+                            <select class="form-control" class="columnName">
+                                <option></option>
+                                <option>First Name</option>
+                                <option>Last Name</option>
+                                <option>Company</option>
+                                <option>Employed</option>
+                                <option>Gender</option>
+                                <option>Country</option>
+                                <option>DOB</option>  
+                                <option>Age</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control" class="filter">
+                                <option>Equal to</option>
+                                <option>Contains</option>
+                                <option>in between</option>
+                                <option>Not equal to</option>
+                                <option>Greater than</option>
+                                <option>Less than</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text">
+                        </td>
+                        <!-- FIFTH COLUMN ROW -->
+                      </tr>
+                      <tr>
+                      <!-- SIXTH COLUMN ROW -->
+                        <td>
+                            <select class="form-control" class="columnName">
+                                <option></option>
+                                <option>First Name</option>
+                                <option>Last Name</option>
+                                <option>Company</option>
+                                <option>Employed</option>
+                                <option>Gender</option>
+                                <option>Country</option>
+                                <option>DOB</option>  
+                                <option>Age</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-control" class="filter">
+                                <option>Equal to</option>
+                                <option>Contains</option>
+                                <option>in between</option>
+                                <option>Not equal to</option>
+                                <option>Greater than</option>
+                                <option>Less than</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input class="form-control" type="text">
+                        </td>
+                      </tr>
+                      <!-- SIXTH COLUMN ROW -->
+                    </tbody>
+                  </table>
+                  <a href="#">add filter</a>
+            </div> 
+            <div class="modal-footer">
+                  <button id="applyButton" type="button" class="btn btn-primary">Apply Filters</button>
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+<br>
+<br>
+          <h1>Hello World</h1>
+  <div ng-hide="dataLoaded">Loading...</div>
+    <div ng-show="dataLoaded" ui-grid="gridOptions" ui-grid-pagination ui-grid-exporter ui-grid-resize-columns ui-grid-selection ui-grid-move-columns ui-grid-edit ui-grid-pinning class="myGrid" ng-model="columnName">  
+    </div>
+  </body>
+</html>

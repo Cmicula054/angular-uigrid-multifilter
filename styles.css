@@ -1,0 +1,70 @@
+.myGrid {
+    width: 1550px;
+    height: 670px;
+    overflow-x: hidden;
+}
+
+.btn-default {
+	padding: 2px;
+	margin-left: 5px;
+}
+
+.blue {
+ 	background-color: #3385ff;  
+ 	padding-bottom: 5px;
+ 	color: black;
+}
+
+.ui-grid-header-cell-label {
+	color: white;
+}
+
+.ui-grid-icon-angle-down {
+	color: white;
+}
+
+.ui-grid-menu-button {
+	padding-bottom: 63px;
+}
+
+#filterButton {
+	float: right;
+	padding-bottom: 8px;
+	margin-right: 13px;
+	margin-top: 6.8rem;
+}
+
+.btn-primary {
+	float: right;
+	padding-bottom: 8px;
+	margin-right: 13px;
+	margin-bottom: -1rem;
+}
+
+.modal-footer button {
+	float: left;
+	margin-right: 1px;
+}
+
+.modal-content {
+	width: 588px;
+}
+
+.modal-body select {
+	margin: 5px 5px 5px 5px;
+	width: 175px;
+}
+
+.form-control {
+	height: 30px;
+}
+
+/*GRID HEADER FILTERS*/
+
+.ui-grid-row:nth-child(even) .ui-grid-cell {
+    background-color: #b4c9db;
+}
+
+.ui-grid-header-viewport { overflow:visible !important; }
+.ui-grid-top-panel { overflow:visible !important; }
+.ui-grid-render-container-body { overflow: hidden !important; }
